@@ -88,7 +88,7 @@ async def myweather(myweather):
         with open(f"{str(myweather.author)}.pickle", "rb") as input_file:
             user_dict = cPickle.load(input_file)
 '''
-    with open(f"H:\\users\\alex\\documents\\weatherbot\\User_locations.csv","r+",encoding='UTF8',newline='') as input_file:
+    with open(os.path.join(os.getcwd(), "User_locations.csv"),"r+",encoding='UTF8',newline='') as input_file:
         csv_rows = csv.DictReader(input_file)
         for line in csv_rows:
                 if myweather.author.name in line['username']:
@@ -136,7 +136,7 @@ async def mylocation(mylocation, zip_code, country_code):
     user_dict = {"username": user, "lat": coords[0], "lon": coords[1]}
     fieldnames = ['username','lat','lon']
     #with open(f"{str(mylocation.author)}.pickle", "wb") as output_file:
-    with open(f"H:\\users\\alex\\documents\\weatherbot\\User_locations.csv","r+",encoding='UTF8',newline='') as input_file:
+    with open(os.path.join(os.getcwd(), "User_locations.csv"),"r+",encoding='UTF8',newline='') as input_file:
         csv_rows = csv.DictReader(input_file)
         for line in csv_rows:
                 if mylocation.author.name in line['username']:
@@ -153,7 +153,7 @@ async def mylocation(mylocation, zip_code, country_code):
 @bot.command(pass_context = True)
 async def testsave(testsave):
     #with open(f"{str(testsave.author)}.pickle", "rb") as input_file:
-    with open(f"H:\\users\\alex\\documents\\weatherbot\\User_locations.csv","r+",encoding='UTF8',newline='') as input_file:
+    with open(os.path.join(os.getcwd(), "User_locations.csv"),"r+",encoding='UTF8',newline='') as input_file:
         csv_rows = csv.DictReader(input_file)
         for line in csv_rows:
                 if testsave.author.name in line['username']:
