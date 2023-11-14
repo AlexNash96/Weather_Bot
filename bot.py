@@ -83,11 +83,6 @@ async def weather(weather, zip_code, country_code='us'):
 
 @bot.command(pass_context = True)
 async def myweather(myweather):
-    '''
-    if os.path.exists(f"./{str(myweather.author)}.pickle"):
-        with open(f"{str(myweather.author)}.pickle", "rb") as input_file:
-            user_dict = cPickle.load(input_file)
-'''
     with open(os.path.join(os.getcwd(), "User_locations.csv"),"r+",encoding='UTF8',newline='') as input_file:
         csv_rows = csv.DictReader(input_file)
         for line in csv_rows:
