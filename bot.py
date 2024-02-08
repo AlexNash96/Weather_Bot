@@ -164,54 +164,11 @@ async def testsave(testsave):
 '''
 @bot.command(pass_context = True)
 async def f10(f10, zip_code, country_code):
-    # command for forecast?
+    # command for forecast
 
 @bot.command(pass_context = True)
 async def radar(radar, zip_code, country_code):
-    # command for radar?
+    # command for radar
 '''
 
 bot.run(TOKEN)
-
-
-# base URL
-
-'''
-print(f"Please enter the postal code for the city you would like weather data for")
-ZIP_CODE = input()
-print(f"Please enter the two digit country code for the city you are looking for")
-COUNTRY_CODE = input()
-print(f"Select weather Description: \nFull, Temp, Precipitation")
-REPORT_TYPE = input()
-REPORT_TYPE = REPORT_TYPE.lower()
-
-
-
-# print(f"{response.json()}")
-
-
-def weather():
-
-        if REPORT_TYPE == "full":
-            """
-            print(f"{name:-^30}")
-            print(f"Temperature: {temperature}")
-            print(f"Humidity: {humidity}")
-            print(f"Pressure: {pressure}")
-            print(f"Weather Report: {report[0]['description']}")
-            """
-            # fix formatting of the tabs when putting string on second line
-            return f"""{name:-^30} \nTemperature: {temperature} \nHumidity: {humidity} \n
-                Pressure: {pressure} \nWeather Report: {report[0]['description']}"""
-        elif REPORT_TYPE == "temp":
-            return f"{name:-^30} \nTemperature: {temperature}"
-        elif REPORT_TYPE == "precipitation":
-            return f"{name:-^30} \nWeather Report: {report[0]['description']}"
-    else:
-        # showing the error message
-        print(f"Error in the HTTP request: {response.status_code}")
-
-
-a = weather()
-print(a)
-'''
