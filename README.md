@@ -4,7 +4,7 @@ Discord weather bot code repository
 ## This is the beginning of Alex's discord bot to provide weather updates to users upon request
 
 ## Chat commands
-** Chat commands will be listed here with functionality once they are implemented **
+Below is a list of the commands that are currently available in WeatherBot
 
 1. !weather <postal_code> / !weather <postal_code> <country_code>
     This command will provide an outoput with weather information for the requested postal code or postal code and country code combination. This report is headed with the name of the city/town that the postal code identifies and includes temperature, humidity, conditions (i.e. cloudy, partly cloudy, sunny, raining, etc), and the air quality index.
